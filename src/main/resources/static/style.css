@@ -5,7 +5,7 @@
 .titre{
     width: 100%;
     height: 20px;
-    background-color: aqua;
+    background-color: yellow;
     color: crimson;
     text-align: center;
 
@@ -22,7 +22,7 @@
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto  auto auto;
     grid-template-rows: 150px ;
-    background-color:gold;
+    background-color:darkgreen;
 
 }
 
@@ -37,7 +37,7 @@
     display: grid;
     grid-template-columns: auto auto auto auto ;
     grid-template-rows: 150px ;
-    background-color:gold;
+    background-color:darkgreen;
 }
 
 .color div {
@@ -51,7 +51,7 @@
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto  auto auto auto auto auto;
     grid-template-rows: 150px ;
-    background-color:gold;
+    background-color:darkgreen;
 }
 
 .value div {
