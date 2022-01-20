@@ -4,6 +4,7 @@ import com.test.testadexo.model.Card;
 import com.test.testadexo.model.Color;
 import com.test.testadexo.model.Value;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 public interface UtilService {
@@ -12,7 +13,7 @@ public interface UtilService {
 
     List<Value> getCardTypeShuffle();
 
-    List<Card> getRandomGame();
+    List<Card> getRandomGame() throws NoSuchAlgorithmException;
 
     List<Card> getGameSortedBycolorAndType(List<Card> randomGame, List<Color> randoColor, List<Value> randomValue);
 }

@@ -15,8 +15,9 @@ public class GeneratorControlerImpl implements GeneratorControler {
         this.gameService = gameService;
     }
 
+    @Override
     @GetMapping("/")
-    public String whatever(Model model) {
+    public String getModel(Model model) {
         GameContent gameContent = gameService.getGameContent();
         model.addAttribute("orderColor", gameContent.getColor());
         model.addAttribute("orderValue", gameContent.getValue());

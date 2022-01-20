@@ -5,6 +5,8 @@ import com.test.testadexo.model.Color;
 import com.test.testadexo.model.Value;
 import org.springframework.stereotype.Service;
 
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -26,8 +28,8 @@ public class UtilServiceImpl implements UtilService {
     }
 
     @Override
-    public List<Card> getRandomGame(){
-        Random rand = new Random();
+    public List<Card> getRandomGame() throws NoSuchAlgorithmException {
+        Random rand =SecureRandom.getInstanceStrong();
         List<Card> fullGame =this.getFullGame();
         List<Card> randomGame = new LinkedList<>();
         for (int i = 0; i < 10; i++) {
