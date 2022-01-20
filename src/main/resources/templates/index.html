@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Test technique de adexo</title>
+    <link rel="stylesheet" href="../static/style.css" data-th-href="@{/style.css}">
+</head>
+<body>
+    <div class="container">
+        <div class="titre">1) ordre aléatoire des couleurs<div/>
+        <div class="color">
+            <div th:each="color: ${orderColor}">
+                <img class="centrerimage" th:src="'images/AS'+${color}+'.gif'" />
+            </div>
+        </div>
+        <div class="titre">2) ordre aléatoire des valeurs<div/>
+        <div class="value">
+            <div th:each="value: ${orderValue}">
+                <img class="centrerimage" th:src="'images/'+${value}+'PIQUE.gif'" />
+            </div>
+        </div>
+        <div class="titre">3) main de 10 cartes de manière aléatoire<div/>
+        <div class="game" >
+            <div th:each="card: ${game}">
+                <img  class="centrerimage" th:src="${card.getImage()}" />
+            </div>
+        </div>
+        <div class="titre">4) main triée selon n'importe quel ordre défini dans la 1ère et 2ème étape<div/>
+        <div class="game">
+            <div th:each="card: ${gameSorted}">
+                <img class="centrerimage" th:src="${card.getImage()}" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
