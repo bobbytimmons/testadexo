@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.security.NoSuchAlgorithmException;
+
 @Controller
 public class GeneratorControlerImpl implements GeneratorControler {
 
@@ -17,7 +19,7 @@ public class GeneratorControlerImpl implements GeneratorControler {
 
     @Override
     @GetMapping("/")
-    public String getModel(Model model) {
+    public String getModel(Model model) throws NoSuchAlgorithmException {
         GameContent gameContent = gameService.getGameContent();
         model.addAttribute("orderColor", gameContent.getColor());
         model.addAttribute("orderValue", gameContent.getValue());

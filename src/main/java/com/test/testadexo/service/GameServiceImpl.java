@@ -5,6 +5,8 @@ import com.test.testadexo.model.GameContent;
 import com.test.testadexo.util.UtilService;
 import org.springframework.stereotype.Service;
 
+import java.security.NoSuchAlgorithmException;
+
 @Service
 public class GameServiceImpl implements GameService {
 
@@ -17,7 +19,7 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public GameContent getGameContent(){
+    public GameContent getGameContent() throws NoSuchAlgorithmException {
         gameContent.setColor(utilService.getCardColorShuffle());
         gameContent.setValue(utilService.getCardTypeShuffle());
         gameContent.setGame(utilService.getRandomGame());
