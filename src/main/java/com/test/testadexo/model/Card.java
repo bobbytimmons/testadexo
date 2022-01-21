@@ -11,7 +11,6 @@ public class Card {
     private Value value;
     private Color color;
     private String image;
-    private String imageRoot;
 
     public Card(Value value, Color color) {
         this.value = value;
